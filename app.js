@@ -118,26 +118,28 @@ var reslt = numb.replace('.', "")
 
 document.write("Number: " , numb , "<BR> Result: " , reslt )
 
+
+
 // Task (13)
 
-var name = prompt("input your name")
+var a = 0 ;
+var name = prompt("enter your name" , "! , . @ not allowed");
+var namelen = name.length;
 
-name = name.toLocaleLowerCase()
-var check = false
-
-for (i = 0; i < name.length; i++) {
-    if (name.slice(i, i + 1).charCodeAt() == 33 || name.slice(i, i + 1).charCodeAt() == 44  || name.slice(i, i + 1).charCodeAt() == 46 || name.slice(i, i + 1).charCodeAt() == 64 ) {
-        check = true;
-    } else {
-        check = false;
+for(i = 0; i < name.length ; i++){
+    if(name.slice(i,i+1).charCodeAt() === 33 || name.slice(i,i+1).charCodeAt() === 33 || name.slice(i,i+1).charCodeAt() === 44 || name.slice(i,i+1).charCodeAt() === 46 || name.slice(i,i+1).charCodeAt() === 64 ){
+        a++
     }
+    
+}
+if(a === 1 ){
+    alert('invalid')
+}
+else{
+    alert("valid")
 }
 
-if (check == true) {
-    alert("please enter a correct user name")
-} else {
-    name
-}
+
 
 
 
