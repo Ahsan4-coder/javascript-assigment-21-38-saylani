@@ -167,27 +167,15 @@ if (isFound === false) {
 
 // Task (15)
 
-var str = prompt();
-var flag = 0
-var count = 0
-var ceck = +str.slice(0, 1)
-
-if (ceck.toString() != "NaN") {
-    flag++
-} else {
-    for (i = 0; i < str.length; i++) {
-        var cc = +str.slice(i, i + 1)
-        if (cc.toString() == "NaN") {
-            count++
-        }
-    }
+var password = prompt('Enter password must be alphanumeric.');
+if (password.length < 6 || (password.charCodeAt(0) > 48 && password.charCodeAt(0) < 58)) {
+    alert('Enter valid password.');
+}
+else { 
+    alert("ok")
 }
 
-if (flag == 1 || count == str.length) {
-    alert("password does not meet above requirements")
-} else {
-    console.log("ok")
-}
+
 
 
 // Task (16)
