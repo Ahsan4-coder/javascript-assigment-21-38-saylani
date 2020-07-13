@@ -255,7 +255,7 @@ document.write("Random dice value: " + diceValue)
 
 // Task (05)
 
-var coinValue = Math.floor(2 * Math.random() + 1)
+var coinValue = Math.floor((Math.random()*2) + 1)
 
 if (coinValue === 2) {
     alert(coinValue + " Random coin value: Head")
@@ -264,9 +264,10 @@ if (coinValue === 2) {
 }
 
 
+
 // Task (06)
 
-var ran = Math.floor(100 * Math.random() + 1)
+var ran = Math.floor((Math.random()*100) + 1)
 
 document.write("Random number between 1 and 100: " + ran)
 
@@ -283,13 +284,30 @@ console.log("the weight of user is " + weight[0] + " Kilograms")
 
 // Task (08)
 
-var secNum = Math.floor(Math.random() * 10)
-var numInput = +prompt("Enter a number between 1 and 10")
+var num = +prompt("enter your choosen number you have only 5 attempts")
 
-if (numInput === secNum) {
-    alert("Congratulations!")
-} else {
-    alert("Please try again")
+var guess = Math.floor((Math.random() * 10) + 1);
+
+for (i = 1; i < 10; i++){ 
+ if (num === guess){
+    alert("you guessed the number " + num + ", is correct")
+    alert("congratulations you win this game by " + i + " times attempts" )
+    break
+ }
+ 
+ else if (i >= 5){
+     alert("game over you loss")
+     break
+    }
+    
+else if (num === +" "){
+        alert("please enter number")
+        break
+    }
+else {
+    num = +prompt('Please try again... </br>'  + "attemped No." + i )
+ }
+ 
 }
 
 
