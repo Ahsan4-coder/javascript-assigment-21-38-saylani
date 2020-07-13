@@ -201,22 +201,11 @@ document.write("User input " + userinput +"<BR>" + "Last character of input: " +
 
 // Task (18)
 
-var text1 = "The quick brown fox jumps over the lazy dog"
-var flag = 0
-var checker = "the "
-var textcheck = text1.toLocaleLowerCase()
-
-for (i = 0; i < textcheck.length; i++) {
-    dd = textcheck.slice(i, (checker.length) + i)
-
-    if (checker == dd) {
-        flag++
-    }
-}
-
-document.write(text1 + "<BR> there are " + flag + " occurrence(s) of world 'the'")
-
-
+var a = "“The quick brown fox jumps over the lazy dog"
+a = a.toLowerCase()
+a = a.match(/the/g)
+var b = a.length
+document.write("there are ", b ," occurrences of word “the”." )
 
 
 
