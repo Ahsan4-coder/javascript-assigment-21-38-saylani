@@ -546,10 +546,12 @@ date()
 
 // Task (02)
 
-function fullName(firstName, lastName) {
-    console.log("Hello !" + firstName + " " + lastName)
+function num() {
+    var firstname = prompt("enter your first name")
+    var secondname = prompt("enter your second name")
+    alert("greetings " + firstname + " " + secondname) 
 }
-fullName("Syed", "Amjad")
+num()
 
 
 // Task (03)
