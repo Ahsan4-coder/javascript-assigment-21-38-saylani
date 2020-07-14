@@ -318,56 +318,76 @@ else {
 
 // Task (01)
 
-document.write(new Date())
+var date = new Date();
+document.write(date)
 
 
 // Task (02)
 
 var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-var date = new Date()
-var curMonth = date.getMonth()
+var a = new Date()
+var b = a.getMonth()
+document.write("current Month : " + month[a.getMonth()])
 
-document.write("Current month: " + month[curMonth])
 
 
 
 // Task(03)
 
-var days = ["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday" ]
-var date = new Date()
-var curday = date.getDay()
-
-document.write("Today is : ==>"  + days[curday] + " <BR>")
-
-var three = days[curday] = days[curday].slice(0, 3)
-
-document.write("today is in three words: ==> " + days[curday])
-
+var days = ["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday" ] 
+var a = new Date()
+var b = a.getDay()
+document.write("today is : " , days[b] + "<Br>")
+var c = days[b].slice(0,3)
+document.write("today is : " , c)
 
 // Task (04)
 
-var days = ["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday" ]
-var date = new Date()
-var currday = date.getDay()
+var days = ["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday" ] 
+var a = new Date()
+var b = a.getDay()
+var c = days[a.getDay()]
 
-if (days[currday] === "sunday" || days[currday] === "sataurday") {
-    alert("Hurray today is " + '"' + days[currday] +  '"' + "It's fun day")
-} else {
-    alert("Today is " + '"' + days[currday] +  '"' + " So please Go to work")
+if (c === "Sunday" || c === "Saturday" ){
+        alert("its funday")
+        
+}
+else if (c === "Tuesday"){
+        alert("Today is " + '"' + c +  '"' + " So please Go to work")
+        
+}
+
+//With Loop
+var days = ["Sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday" ] 
+var a = new Date()
+var b = a.getDay()
+var c = days[a.getDay()]
+
+
+for ( i = 0 ; i < c.length; i++ ){
+    if (c === "Sunday" || c === "Saturday" ){
+        alert("its funday")
+        break
+    }
+    else if (c === "Tuesday"){
+        alert("Today is " + '"' + c +  '"' + " So please Go to work")
+        break
+    }
 }
 
 
 // Task (05)
 
-var date = +prompt("Enter date")
+var a = new Date()
+var b = a.getDate()
 
-if (date === 1 && date <= 15) {
+if (b >= 1 && b <= 15 ){
     alert("First fifteen days of month")
-} else if (date > 15 && date <= 31) {
-    alert("Last fifteen days of month")
-} else {
-    alert("Please enter correct date")
 }
+else if (b >= 16 && b <= 30 ){
+    alert("Last fifteen days of month")
+}
+
 
 
 // Task (06)
