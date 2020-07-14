@@ -556,57 +556,89 @@ num()
 
 // Task (03)
 
-function sum(a, b) {
-    console.log(a + b)
+function sum(a,b) {
+    var s = a + b
+    return s
 }
-sum(2, 6)
+
+var add = sum(+prompt("enter 1st sum"),+prompt("enter 1st sum"))
+
+document.write("sum of addition is " + add)
+
+
+
 
 
 // Task (04)
 
-function calculate(num1, num2, operator) {
-    switch (operator) {
-        case "+":
-            return num1 + num2
-        case "-":
-            return num1 - num2
-        case "*":
-            return num1 * num2
-        case "/":
-            return num1 / num2
+function calc(num1,opr,num2){
+    if(opr === "+"){
+        return (num1 + num2)
+    }
+    else if(opr === "-"){
+        return (num1 - num2)
+    } 
+    else if(opr === "*"){
+        return (num1 * num2)
+    }
+    
+    else if (opr === "/"){
+        return (num1 / num2)
+    }
+    else{
+        return "Incorrect Operator!"
     }
 }
+
+var num1 = +prompt("enter 1st number")
+var opr = prompt("enter operator")
+var num2 = +prompt("enter 2nd number")
+ 
+
+document.write(calc(num1,opr,num2))
 
 
 
 // Task (05)
 
-function square(num) {
-    return num * num
+function square(a) {
+    var b = Math.sqrt(a)
+    document.write(b)
 }
+
+square(+prompt("enter number"))
+
 
 
 // Task (06)
 
-function factorial(num) {
-    if (num == 0)
+function factorialize(num) {
+    if (num < 0) 
+          return -1;
+    else if (num == 0) 
         return 1;
     else {
-        return (num * factorial(num - 1));
+        return (num * factorialize(num - 1));
     }
-}
-factorial(5)
+  }
+ var a =  factorialize(5);
+ document.write(a)
+
+
 
 
 // Task (07)
 
-function counting() {
-    var start = +prompt("Enter counting start number")
-    var end = +prompt("Enter counting end number")
-    for (var i = start; i <= end; i++) {
-        document.write(i + "<BR>")
+function num(start,end) { 
+    for(i = start; i <= end ; i++){
+     document.write(i + "<br>");   
     }
-}
+};
+
+num(
++prompt("enter the starting point"),
++prompt("enter the ending point")
+);
 
 
 
@@ -624,9 +656,17 @@ function calculateHypotenuse(base, perpendicular) {
 
 // Task (09)
 
-
+(variable)
 function areaRectangle(width, height) {
     return width * height
+}
+var a = areaRectangle(4, 5)
+document.write(a )
+
+(value)
+function areaRectangle(width, height) {
+    var a = width * height
+    document.write(a)
 }
 areaRectangle(4, 5)
 
@@ -642,7 +682,7 @@ function isPalindrome(text) {
         alert(text + " is not palindrome")
     }
 }
-
+isPalindrome(prompt("enter"))
 
 // Task (11)
 
@@ -676,27 +716,32 @@ function find_longest_word(str) {
 console.log(find_longest_word('Web Development Tutorial'));
 
 // Task (13)
-function Char_Counts(str1) {
-    var uchars = {};
-    str1.replace(/\S/g, function (l) {
-        uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1);
-    });
-    return uchars;
+function count(str,word){
+    var arr1 = str.split('')
+    count = 0
+    for(x=0;x<arr1.length;x++){
+        if(arr1[x]===word){
+            count += 1
+        }
+    }return count
+    
 }
-console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));
+var str=prompt("Enter a string");
+var wrd=prompt("Enter a word to count from the string");
+document.write(wrd+" occur "+count(str, wrd)+" times in '"+str+"'")
 
 
 
 // Task (14)
 
-function circum(radius) {
-    var circle = 2 * Math.PI * radius;
-    alert("The circumference is " + Math.floor(circle))
+function calcCircumference(radius){
+    cir = 2*3.142*radius;
+    return ("The circumference is "+cir);
 }
-circum(3)
+function calcArea(radius){
+    area = 3.142*(radius**2);
+    return ("<br>The area is "+area);
+}
 
-function area(radius) {
-    var circle = Math.PI * (radius * radius)
-    alert("The area is: " + Math.floor(circle))
-}
-area(3)
+document.write(calcCircumference(5));
+document.write(calcArea(8));
