@@ -488,7 +488,7 @@ document.write("Your age is " + Math.floor(age) + "<BR>" + "Your birthday year i
 
 // a)
 
-var name = "Syed Amjad Ali";
+var name = "Ahsan";
 
 
 // b)
